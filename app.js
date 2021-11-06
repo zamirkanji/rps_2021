@@ -75,8 +75,8 @@ let playRound = (comp, player) => {
 	console.log(`Computer Score: ${computerCount}, Player Score: ${playerCount}`);
 };
 
-let comp = computerPlay();
-let player = playerSelection();
+// let comp = computerPlay();
+// let player = playerSelection();
 
 
 let game = (playRound) => {
