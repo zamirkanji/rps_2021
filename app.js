@@ -48,42 +48,53 @@ let playerSelection = () => {
 };
 
 //function takes in player and computers input and returns winner of each round. incrementing count of winner
-let playRound = (comp, player) => {
-	if (player === comp) {
-		console.log("Tied!");
-	} else if (player === PAPER && comp === ROCK) {
-		playerCount++;
-		return `You Won! Paper beats Rock! Player Score: ${playerCount}, Computer Score: ${computerCount}`;
-	} else if (player === ROCK && comp === SCISSORS) {
-		playerCount++;
-		return `You Won! Rock beats Scissors! Player Score: ${playerCount}, Computer Score: ${computerCount}`;
-	} else if (player === SCISSORS && comp === PAPER) {
-		playerCount++;
-		return `You Won! Scissors beats Paper! Player Score: ${playerCount}, Computer Score: ${computerCount}`;
-	} else if (player === PAPER && comp === SCISSORS) {
-		computerCount++;
-		return `You lost! Paper gets cut! Player Score: ${playerCount}, Computer Score: ${computerCount}`;
-	} else if (player === ROCK && comp === PAPER) {
-		computerCount++;
-		return `You lost! Rock gets covered! Player Score: ${playerCount}, Computer Score: ${computerCount}`;
-	} else if (player === SCISSORS && comp === ROCK) {
-		computerCount++;
-		return `You lost! Scissors gets smashed! Player Score: ${playerCount}, Computer Score: ${computerCount}`;
+function playRound (comp, player) {
+	comp;
+	player;
+	if (comp == player) {
+		return "You Tied!";
+	} else if (player == PAPER) {
+		if (comp == ROCK) {
+			console.log("You Win!");
+			playerCount++;
+		} else {
+			console.log("You lost!");
+			computerCount++;
+		}	
+	} else if (player == ROCK) {
+		if (comp == PAPER) {
+			console.log("You lost!");
+			computerCount++;
+		} else {
+			console.log("You win!");
+			playerCount++;
+		}
+	} else if (player == SCISSORS) {
+		if (comp == PAPER){
+			console.log("You won!");
+			playerCount++;
+		} else {
+			console.log("You lost!");
+			computerCount++;
+		}
 	} else {
 		return ERROR;
 	}
-	console.log(`Computer Score: ${computerCount}, Player Score: ${playerCount}`);
+	return `computer score: ${computerCount}, player score: ${playerCount}`;
 };
 
-// let comp = computerPlay();
-// let player = playerSelection();
+let comp = computerPlay();
+let player = playerSelection();
+let round = playRound(comp, player);
+console.log(round);
+console.log(round);
+                                                                                                                                                                                                                                                                                                                                                                                    
 
+// let game = (playRound) => {
+// 	let result = playRound(computerPlay(), playerSelection());
+// 	console.log(result);
+// 	// console.log(`This is the result ${result}`);
+// 	// console.log(computerCount, playerCount);
+// };
 
-let game = (playRound) => {
-	let result = playRound(computerPlay(), playerSelection());
-	console.log(result);
-	// console.log(`This is the result ${result}`);
-	// console.log(computerCount, playerCount);
-};
-
-console.log(game(playRound));
+// console.log(game(round));
