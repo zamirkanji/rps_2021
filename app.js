@@ -29,7 +29,7 @@ let computerPlay = () => {
 	return r;
 };
 
-//function that takes in players input and returns it
+//function that takes in players input value and returns it
 let playerSelection = () => {
 	const initialInput = prompt("What selection do you choose?").trim();
 	let playerInput = initialInput.charAt(0).toUpperCase() + initialInput.slice(1);
@@ -49,11 +49,15 @@ let playerSelection = () => {
 
 //function takes in player and computers input and returns winner of each round. incrementing count of winner
 function playRound (comp, player) {
-	comp;
-	player;
+	// comp;
+	// player;
+
+	//check if inputs are tied
 	if (comp == player) {
 		return "You Tied!";
-	} else if (player == PAPER) {
+	}
+	//if not, check if player has paper
+	else if (player == PAPER) {
 		if (comp == ROCK) {
 			console.log("You Win!");
 			playerCount++;
@@ -61,7 +65,9 @@ function playRound (comp, player) {
 			console.log("You lost!");
 			computerCount++;
 		}	
-	} else if (player == ROCK) {
+	} 
+	//check if player has rock
+	else if (player == ROCK) {
 		if (comp == PAPER) {
 			console.log("You lost!");
 			computerCount++;
@@ -69,7 +75,9 @@ function playRound (comp, player) {
 			console.log("You win!");
 			playerCount++;
 		}
-	} else if (player == SCISSORS) {
+	} 
+	//check if player has scissors
+	else if (player == SCISSORS) {
 		if (comp == PAPER){
 			console.log("You won!");
 			playerCount++;
@@ -80,21 +88,45 @@ function playRound (comp, player) {
 	} else {
 		return ERROR;
 	}
-	return `computer score: ${computerCount}, player score: ${playerCount}`;
+	return `player score: ${playerCount}, computer score: ${computerCount}, `;
 };
 
 let comp = computerPlay();
+console.log(`computer selection log: ${comp}`);
 let player = playerSelection();
+console.log(`player selection log: ${player}`);
 let round = playRound(comp, player);
-console.log(round);
-console.log(round);
+// console.log(round);
                                                                                                                                                                                                                                                                                                                                                                                     
 
-// let game = (playRound) => {
-// 	let result = playRound(computerPlay(), playerSelection());
-// 	console.log(result);
-// 	// console.log(`This is the result ${result}`);
-// 	// console.log(computerCount, playerCount);
-// };
+function game (playRound){
+	for (let i = 0; i < 5; i++) {
+		console.log(playRound);
+		let result = playRound;
+		console.log(playerCount, computerCount, result, i);
+		//not properly calling function - not asking for input everytime
+	}
 
-// console.log(game(round));
+	// let winner;
+	// let result = playRound;
+	// let i = 0;
+
+	// let determineWinner = function (playRound) {
+	// 	if (playerCount == 5 || computerCount == 5) {
+	// 		return "Game Over";
+	// 	} else if (playerCount > computerCount) {
+	// 		return "You beat the machine!";
+	// 	} else if (computerCount > playerCount) {
+	// 		return "You lost to the machine!";
+	// 	}
+	// }
+	// do  {
+	// 	determineWinner()
+	// } while (i < 5);
+	// console.log(computerCount, playerCount);
+
+}
+
+	// return result
+// console.log(playerCount, computerCount);
+console.log(`game results test: ${game(round)}`);
