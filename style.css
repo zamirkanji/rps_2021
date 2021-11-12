@@ -17,3 +17,7 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+.hero {
+    border: 3px solid blue;
+}

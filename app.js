@@ -1,3 +1,5 @@
+const beginGame = document.querySelector('.begin-game');
+
 const ROCK = "Rock";
 const PAPER = "Paper";
 const SCISSORS = "Scissors";
@@ -6,6 +8,18 @@ const ERROR = "Error!";
 //computer and player counts, starting at zero
 let computerCount = 0;
 let playerCount = 0;
+
+beginGame.addEventListener('click', displayScores);
+
+//function to display scores one begin game button is clicked
+function displayScores (e) {
+	// console.log(e);
+	let displayScores = document.querySelector('.display-scores');
+	let computerScore = document.createElement('p');
+	computerScore.classList.add('computer-score');
+	computerScore.textContent = computerCount;
+	displayScores.appendChild(computerScore);
+}
 
 //function to randomize computer selection
 let computerPlay = () => {
@@ -93,23 +107,23 @@ function playRound (comp, player) {
 	return `player score: ${playerCount}, computer score: ${computerCount}, `;
 };
 
-let comp = computerPlay();
-console.log(`computer selection log: ${comp}`);
-let player = playerSelection();
-console.log(`player selection log: ${player}`);
-let round = playRound(comp, player);
+// let comp = computerPlay();
+// console.log(`computer selection log: ${comp}`);
+// let player = playerSelection();
+// console.log(`player selection log: ${player}`);
+// let round = playRound(comp, player);
 // console.log(round);
                                                                                                                                                                                                                                                                                                                                                                                     
 
-function game (playRound){
-	for (let i = 0; i < 5; i++) {
-		console.log(playRound);
-		let result = playRound;
-		console.log(playerCount, computerCount, result, i);
-		//not properly calling function - not asking for input everytime
-	}
-}
+// function game (playRound){
+// 	for (let i = 0; i < 5; i++) {
+// 		console.log(playRound);
+// 		let result = playRound;
+// 		console.log(playerCount, computerCount, result, i);
+// 		//not properly calling function - not asking for input everytime
+// 	}
+// }
 
 	// return result
 // console.log(playerCount, computerCount);
-console.log(`game results test: ${game(round)}`);
+// console.log(`game results test: ${game(round)}`);
