@@ -29,23 +29,25 @@ let computerPlay = () => {
 	return r;
 };
 
+
+
 //function that takes in players input value and returns it
-let playerSelection = () => {
-	const initialInput = prompt("What selection do you choose?").trim();
-	let playerInput = initialInput.charAt(0).toUpperCase() + initialInput.slice(1);
-	// console.log(playerInput);
-	if (playerInput == ROCK) {
-		playerInput = ROCK;
-	} else if (playerInput == PAPER) {
-		playerInput = PAPER;
-	} else if (playerInput == SCISSORS) {
-		playerInput = SCISSORS;
-	} else {
-		console.log("ERROR. Not an Input");
-	}
-	console.log(`Player chooses: ${playerInput}`);
-	return playerInput;
-};
+// let playerSelection = () => {
+// 	const initialInput = prompt("What selection do you choose?").trim();
+// 	let playerInput = initialInput.charAt(0).toUpperCase() + initialInput.slice(1);
+// 	// console.log(playerInput);
+// 	if (playerInput == ROCK) {
+// 		playerInput = ROCK;
+// 	} else if (playerInput == PAPER) {
+// 		playerInput = PAPER;
+// 	} else if (playerInput == SCISSORS) {
+// 		playerInput = SCISSORS;
+// 	} else {
+// 		console.log("ERROR. Not an Input");
+// 	}
+// 	console.log(`Player chooses: ${playerInput}`);
+// 	return playerInput;
+// };
 
 //function takes in player and computers input and returns winner of each round. incrementing count of winner
 function playRound (comp, player) {
