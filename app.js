@@ -106,25 +106,6 @@ function game (playRound){
 		console.log(playerCount, computerCount, result, i);
 		//not properly calling function - not asking for input everytime
 	}
-
-	// let winner;
-	// let result = playRound;
-	// let i = 0;
-
-	// let determineWinner = function (playRound) {
-	// 	if (playerCount == 5 || computerCount == 5) {
-	// 		return "Game Over";
-	// 	} else if (playerCount > computerCount) {
-	// 		return "You beat the machine!";
-	// 	} else if (computerCount > playerCount) {
-	// 		return "You lost to the machine!";
-	// 	}
-	// }
-	// do  {
-	// 	determineWinner()
-	// } while (i < 5);
-	// console.log(computerCount, playerCount);
-
 }
 
 	// return result
