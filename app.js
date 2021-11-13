@@ -11,14 +11,38 @@ let playerCount = 0;
 
 beginGame.addEventListener('click', displayScores);
 
-//function to display scores one begin game button is clicked
+//when clicked, check if scores are already displayed, if so, return and exit out of function before running 
+
+// beginGame.addEventListener('click', (e) => {
+// 	if (e.classList.contains('computer-score')) {
+// 		return;
+// 	} else {
+// 		displayScores
+// 	}
+// })
+
+
 function displayScores (e) {
-	// console.log(e);
+	
+	console.log(e);
 	let displayScores = document.querySelector('.display-scores');
+	// e.classList.toggle('computer-score');
 	let computerScore = document.createElement('p');
+	let playerScore = document.createElement('p');
+
 	computerScore.classList.add('computer-score');
+	playerScore.classList.add('player-score');
+
 	computerScore.textContent = computerCount;
+	playerScore.textContent = playerCount;
+
 	displayScores.appendChild(computerScore);
+	displayScores.appendChild(playerScore);
+	
+	if (e.propertyName == 'computer-score') {
+		return;
+		console.log(e.target)
+	}
 }
 
 //function to randomize computer selection

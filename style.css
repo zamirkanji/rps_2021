@@ -20,4 +20,26 @@ html, body {
 
 .hero {
     border: 3px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    border: 3px solid red;
+    margin: 25px;
+    display: flex;
+}
+
+
+.display-scores {
+    border: 3px solid green;
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+    padding: 35px;
+}
+.computer-score, .player-score{
+    border: 3px solid green;
+    padding: 15px;
 }
