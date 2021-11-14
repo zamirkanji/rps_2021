@@ -66,15 +66,13 @@ function displayGame (e) {
 	displayScores.classList.remove('vis')
 
 	//starts game ---> run startGame()
-	startGame();
+	// startGame();
 }
 
 let clicked = false;
 // computerScore.textContent = '';
 // playerScore.textContent = '';
 
-const startGame = (e) => {
-	console.log(e);
 	rockbtn.addEventListener('click', () => {
 		clicked = true;
 		let selection = computerPlay(); //returning r from randomized function 
@@ -124,10 +122,6 @@ const startGame = (e) => {
 		}
 		checkIfOver(computerCount, playerCount);
 	})
-
-	
-	
-}
 
 function checkIfOver (comp, player) {
 	if (comp == 5 || player == 5) {

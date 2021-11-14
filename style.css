@@ -9,7 +9,7 @@ html, body {
 }
 
 .main-container {
-    border: 3px solid red;
+    /* border: 3px solid red; */
     margin: 0 auto;
     padding: 0;
     height: 100%;
@@ -18,12 +18,13 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: black;
+    gap: 20px 0;
 }
 
 .hero {
     flex: 1;
     width: 100%;
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -31,14 +32,15 @@ html, body {
     /* justify-content: center; */
 }
 .title-container {
-    border: 3px solid aqua;
+    /* border: 3px solid aqua; */
     flex: 1;
     display: flex;
     align-items: center;
+    padding: 15px;
 }
 
 #main-title {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* flex-shrink: 2; */
     width: 100%;
     /* height: 50%; */
@@ -46,32 +48,39 @@ html, body {
     text-align: center;
     font-weight: 400;
     font-size: 30px;
+    letter-spacing: .05em;
 }
 
 .begin-container {
-    border: 3px solid aqua;
+    /* border: 3px solid aqua; */
     flex: 1;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    
 }
 
 #instructions {
     color: white;
-    border: 1px solid yellow;
-    flex: 1;
+    /* border: 1px solid yellow; */
+    /* flex: 1; */
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .begin-game {
     /* height: 40px; */
-    flex: 1;
+    margin-top: 10px;
+    /* flex: 1; */
+    /* height: 100px; */
 }
 
 .begin-container .begin-game {
-    width: 25%;
-    padding: 8px;
+    width: 30%;
+    /* padding: 8px; */
+    
     /* background-color: thistle; */
 }
 
@@ -79,7 +88,7 @@ html, body {
 .selection-container {
     flex: 1;
     width: 100%;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     /* margin: 25px; */
     display: flex;
     flex-direction: column;
@@ -92,7 +101,7 @@ html, body {
 
 .player-selection {
     flex: 1;
-    border: 3px solid yellowgreen;
+    /* border: 3px solid yellowgreen; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -100,7 +109,7 @@ html, body {
 }
 
 .comp-selection {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,7 +158,7 @@ html, body {
 
 
 .rock-container {
-    border: 3px solid tomato;
+    /* border: 3px solid tomato; */
     display: flex;
     justify-content: center;
     /* height: 100%; */
@@ -157,14 +166,14 @@ html, body {
 }
 
 .paper-container {
-    border: 3px solid tomato;
+    /* border: 3px solid tomato; */
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
 .scissors-container {
-    border: 3px solid tomato;
+    /* border: 3px solid tomato; */
     display: flex;
     justify-content: center;
     flex: 1;
@@ -176,6 +185,7 @@ html, body {
     background-color: #141414;
     border: 4px solid rgba(54, 124, 255, 0.6);
     font-weight: 400;
+    font-size: 16px;
     letter-spacing: .05em;
     position: relative;
     outline: none;
@@ -199,7 +209,7 @@ html, body {
 
 .comp-selection {
     flex: 1;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
 }
 
 
@@ -213,14 +223,14 @@ html, body {
 .display-scores {
     flex: 1;
     width: 100%;
-    border: 3px solid thistle;
+    /* border: 3px solid thistle; */
     display: flex;
     flex-direction: column;
     padding: 0;
 }
 
 .scores {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     flex: 1;
     display: flex;
     /* flex-direction: column; */
@@ -231,7 +241,7 @@ html, body {
 .comp-score-container {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     flex: 1;
     /* width: 25%; */
@@ -240,7 +250,7 @@ html, body {
 .player-score-container {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-align: center;
     flex: 1;
     /* width: 25%; */
@@ -250,7 +260,7 @@ html, body {
     color: white;
 }
 .computer-score, .player-score{
-    border: 3px solid green;
+    /* border: 3px solid green; */
     /* padding: 15px; */
     color: white;
 }
@@ -258,7 +268,7 @@ html, body {
 
 .round-winner-container {
     flex: 1;
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +289,7 @@ html, body {
 
 .play-again-container {
     flex: 1;
-    border: 3px solid purple;
+    /* border: 3px solid purple; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -288,7 +298,7 @@ html, body {
 
 .display-winner {
     flex: 1;
-    border: 3px solid brown;
+    /* border: 3px solid brown; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -304,4 +314,8 @@ html, body {
 .all-text {
     font-weight: 100;
     letter-spacing: .05em;
+}
+
+.play-again-container .play-again {
+    width: 35%;
 }
