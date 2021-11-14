@@ -45,6 +45,8 @@ function displayScores (e) {
 	}
 }
 
+
+//once game starts and player makes selection, then run this function and return result to comp selection DOM 
 //function to randomize computer selection
 let computerPlay = () => {
 	const min = 1;

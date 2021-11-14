@@ -1,4 +1,5 @@
 html, body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -16,29 +17,121 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: black; */
+    background-color: black;
 }
 
 .hero {
+    flex: 1;
+    width: 100%;
     border: 3px solid blue;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.title {
+    border: 3px solid aqua;
+    /* color: white; */
+    flex: 1;
 }
 
-.buttons {
-    border: 3px solid red;
-    margin: 25px;
+#main-title {
+    color: white;
+}
+
+.begin-container {
+    border: 3px solid aqua;
+    flex: 1;
     display: flex;
+    flex-direction: column;
+}
+
+#instructions {
+    color: white;
+}
+
+.begin-game {
+    background-color: #141414;
+    border: 4px solid rgba(54, 124, 255, 0.6);
+    font-weight: 600;
+    position: relative;
+    outline: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+    width: 130px;
+    opacity: 1;
+    color: white;
+}
+
+.selection {
+    flex: 1;
+    width: 75%;
+    border: 3px solid yellow;
+    /* margin: 25px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.player-selection {
+    flex: 1;
+    border: 3px solid yellowgreen;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* gap: 25px; */
+}
+
+.rock-container {
+    border: 3px solid tomato;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.rock-btn {
+    width: 50%;
+    text-align: center;
+}
+.paper-container {
+    border: 3px solid tomato;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.paper-btn {
+    width: 50%;
+    text-align: center;
+}
+.scissors-container {
+    border: 3px solid tomato;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.scissors-btn {
+    width: 50%;
+    text-align: center;
+}
+
+.comp-selection {
+    flex: 1;
+    border: 3px solid yellow;
 }
 
 
 .display-scores {
+    flex: 1;
+    width: 50%;
     border: 3px solid green;
     display: flex;
     flex-direction: row;
-    margin: 25px;
+    /* margin: 25px; */
     padding: 35px;
+    justify-content: center;
 }
 .computer-score, .player-score{
     border: 3px solid green;
