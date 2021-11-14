@@ -14,7 +14,7 @@
                 <h1 id="main-title">Let's Play Rock, Paper, Scissors!</h1>
             </div>
             <div class="begin-container">
-                <p id="instructions">Press "Begin Game" below.</p>
+                <p id="instructions" class="all-text">Press "Begin Game" below.</p>
                 <button class="begin-game btns">Begin Game</button>
             </div>
             
@@ -35,18 +35,23 @@
                 </div>    
             </div>
             <div class="comp-selection">
-                <p id="comp-selection"></p>
+                <p id="comp-selection" class="all-text"></p>
             </div> 
         </div>    
-        <div class="display-scores vis">
-            <div class="scores fade">
-                <p class="computer-score"></p>
-                <p class="player-score"></p>
-            </div>
-            <div class="score-text">
-                <p id="comp-text" class="txt">Computer Score</p>
-                <p id="player-text" class="txt">Player Score</p>
-            </div>
+        <div class="display-scores vis">           
+                <div class="round-winner-container">
+                    <p class="round-winner-text all-text"></p>
+                </div>
+                <div class="scores fade">
+                    <div class="comp-score-container">
+                        <p class="computer-score"></p>
+                        <p id="comp-text" class="txt all-text">Computer Score</p>
+                    </div>
+                    <div class="player-score-container">
+                        <p class="player-score"></p>
+                        <p id="player-text" class="txt all-text">Player Score</p>
+                    </div>
+                </div>
         </div> 
         <div class="display-winner">
             <p id="winner"></p>
