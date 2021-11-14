@@ -15,31 +15,45 @@
             </div>
             <div class="begin-container">
                 <p id="instructions">Press "Begin Game" below.</p>
-                <button class="begin-game">Begin Game</button>
+                <button class="begin-game btns">Begin Game</button>
             </div>
             
         </div>
-        <div class="selection">
+        <div class="selection-container vis">
             <div class="player-selection">
-                <div class="rock-container">
-                    <button class="rock-btn">Rock</button>
+                <div class="rock-container  fade">
+                    <button class="rock-btn btns">Rock</button>
                     <!-- <p>Rock</p> -->
                 </div>
-                <div class="paper-container">
-                    <button class="paper-btn">Paper</button>    
+                <div class="paper-container fade">
+                    <button class="paper-btn btns">Paper</button>    
                     <!-- <p>Paper</p> -->
                 </div>
-                <div class="scissors-container">
-                    <button class="scissors-btn">Scissors</button>
+                <div class="scissors-container fade">
+                    <button class="scissors-btn btns">Scissors</button>
                     <!-- <p>Scissors</p> -->
                 </div>    
             </div>
             <div class="comp-selection">
+                <p id="comp-selection"></p>
             </div> 
         </div>    
-        <div class="display-scores">
-            
-        </div>   
+        <div class="display-scores vis">
+            <div class="scores fade">
+                <p class="computer-score"></p>
+                <p class="player-score"></p>
+            </div>
+            <div class="score-text">
+                <p id="comp-text" class="txt">Computer Score</p>
+                <p id="player-text" class="txt">Player Score</p>
+            </div>
+        </div> 
+        <div class="display-winner">
+            <p id="winner"></p>
+        </div>
+        <div class="play-again-container vis">
+            <button class="play-again btns">Play Again</button>
+        </div>  
     </div>
     
     <script src="app.js"></script>

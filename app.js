@@ -1,4 +1,17 @@
 const beginGame = document.querySelector('.begin-game');
+const rockbtn = document.querySelector('.rock-btn');
+const paperbtn = document.querySelector('.paper-btn');
+const scissorsbtn = document.querySelector('.scissors-btn');
+const selection = document.querySelector('.selection-container');
+
+const showComp = document.querySelector('#comp-selection')
+
+const displayScores = document.querySelector('.display-scores');
+const scores = document.querySelector('.scores');
+
+const computerScore = document.querySelector('.computer-score');
+const playerScore = document.querySelector('.player-score');
+const playAgain = document.querySelector('.play-again-container');
 
 const ROCK = "Rock";
 const PAPER = "Paper";
@@ -9,7 +22,7 @@ const ERROR = "Error!";
 let computerCount = 0;
 let playerCount = 0;
 
-beginGame.addEventListener('click', displayScores);
+beginGame.addEventListener('click', displayGame);
 
 //when clicked, check if scores are already displayed, if so, return and exit out of function before running 
 
@@ -21,30 +34,73 @@ beginGame.addEventListener('click', displayScores);
 // 	}
 // })
 
-
-function displayScores (e) {
+//append scores to displayscore div 
+const displayCount = () => {
 	
-	console.log(e);
-	let displayScores = document.querySelector('.display-scores');
-	// e.classList.toggle('computer-score');
-	let computerScore = document.createElement('p');
-	let playerScore = document.createElement('p');
-
-	computerScore.classList.add('computer-score');
-	playerScore.classList.add('player-score');
 
 	computerScore.textContent = computerCount;
 	playerScore.textContent = playerCount;
-
-	displayScores.appendChild(computerScore);
-	displayScores.appendChild(playerScore);
-	
-	if (e.propertyName == 'computer-score') {
-		return;
-		console.log(e.target)
-	}
+	scores.appendChild(computerScore);
+	scores.appendChild(playerScore);
 }
 
+
+//when begin game button is clicked, display buttons and scores 
+function displayGame (e) {
+	displayCount();
+	console.log(e);
+	selection.classList.remove('vis');
+	displayScores.classList.remove('vis')
+
+	startGame();
+}
+
+//once game ends, winner is declared, 
+function playAgainBtn () {
+	playAgain.classList.remove('vis');
+}
+
+// computerScore.textContent = '';
+// playerScore.textContent = '';
+
+const startGame = () => {
+	rockbtn.addEventListener('click', () => {
+		let selection = computerPlay();
+		// console.log(selection);
+		showComp.textContent = `Computer chose: ${selection}`;
+		if (selection == SCISSORS) {
+			playerScore.textContent = ++playerCount;
+		} else if (selection == PAPER) {
+			computerScore.textContent = ++computerCount;
+		} else {
+			
+		}
+	})
+	paperbtn.addEventListener('click', () => {
+		let selection = computerPlay();
+		// console.log(selection);
+		showComp.textContent = `Computer chose: ${selection}`;
+		if (selection == SCISSORS) {
+			playerScore.textContent = ++playerCount;
+		} else if (selection == PAPER) {
+			computerScore.textContent = ++computerCount;
+		} else {
+
+		}
+	})
+	scissorsbtn.addEventListener('click', () => {
+		let selection = computerPlay();
+		// console.log(selection);
+		showComp.textContent = `Computer chose: ${selection}`;
+		if (selection == SCISSORS) {
+			playerScore.textContent = ++playerCount;
+		} else if (selection == PAPER) {
+			computerScore.textContent = ++computerCount;
+		} else {
+
+		}
+	})
+}
 
 //once game starts and player makes selection, then run this function and return result to comp selection DOM 
 //function to randomize computer selection
@@ -69,25 +125,6 @@ let computerPlay = () => {
 	return r;
 };
 
-
-
-//function that takes in players input value and returns it
-// let playerSelection = () => {
-// 	const initialInput = prompt("What selection do you choose?").trim();
-// 	let playerInput = initialInput.charAt(0).toUpperCase() + initialInput.slice(1);
-// 	// console.log(playerInput);
-// 	if (playerInput == ROCK) {
-// 		playerInput = ROCK;
-// 	} else if (playerInput == PAPER) {
-// 		playerInput = PAPER;
-// 	} else if (playerInput == SCISSORS) {
-// 		playerInput = SCISSORS;
-// 	} else {
-// 		console.log("ERROR. Not an Input");
-// 	}
-// 	console.log(`Player chooses: ${playerInput}`);
-// 	return playerInput;
-// };
 
 //function takes in player and computers input and returns winner of each round. incrementing count of winner
 function playRound (comp, player) {
